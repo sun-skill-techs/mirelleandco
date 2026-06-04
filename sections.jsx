@@ -144,13 +144,13 @@ function Explore({ onShop }){
 
 /* ============== PRODUCT CARD ============== */
 function ProductCard({ p, onAdd }){
-  return React.createElement('div',{ className:'card' },
+  return React.createElement('a',{ className:'card', href:'product.html' },
     React.createElement('div',{ className:'card-media' },
       React.createElement(Slot,{ tone:p.tone, label:`${p.name.toLowerCase()}`, className:'main', src:PRODUCT_IMAGES[p.id], alt:p.name }),
       p.badge && React.createElement('span',{ className:`card-badge ${p.badgeClass||''}` }, p.badge),
       p.soon
         ? React.createElement('button',{ className:'quick-add soon', disabled:true },'Coming Soon')
-        : React.createElement('button',{ className:'quick-add', onClick:()=>onAdd(p) },'Add to Cart'),
+        : React.createElement('button',{ className:'quick-add', onClick:e=>{e.preventDefault();onAdd(p);} },'Add to Cart'),
     ),
     React.createElement('div',{ className:'card-info' },
       React.createElement('div',{ className:'card-name' }, p.name),

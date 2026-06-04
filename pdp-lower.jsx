@@ -113,15 +113,17 @@ function Related({ items, onAdd, wishlist, onWish }){
 /* ============== STICKY ADD BAR ============== */
 function StickyBar({ product, onAdd, visible }){
   const mat = product.materials[0];
+  const img = product.gallery[0];
   return React.createElement('div',{ className:`sticky-bar ${visible?'show':''}` },
     React.createElement('div',{ className:'wrap sticky-inner' },
-      React.createElement('div',{ className:'sb-thumb' }, React.createElement(Slot,{ tone:product.gallery[0].tone })),
+      React.createElement('div',{ className:'sb-thumb' },
+        React.createElement(Slot,{ tone:img.tone, src:img.src, alt:img.alt })),
       React.createElement('div',{ className:'sb-info' },
         React.createElement('div',{ className:'sb-name' }, product.name),
         React.createElement('div',{ className:'sb-meta' }, mat.name)),
       React.createElement('div',{ className:'sb-price' },
         React.createElement('span',{ className:'was' }, zar(mat.compare)), zar(mat.price)),
-      React.createElement('button',{ className:'btn btn-solid sb-btn atc-sb', onClick:()=>onAdd({ id:`${product.id}-${mat.id}-45`, name:product.name, mat:`${mat.name} · 45 cm`, price:zar(mat.price), tone:product.gallery[0].tone, qty:1 }) },'Add to Bag'),
+      React.createElement('button',{ className:'btn btn-solid sb-btn atc-sb', onClick:()=>onAdd({ id:`${product.id}-${mat.id}-45`, name:product.name, mat:`${mat.name} · 45 cm`, price:zar(mat.price), tone:img.tone, qty:1 }) },'Add to Bag'),
     )
   );
 }
