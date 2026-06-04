@@ -24,7 +24,7 @@ function App(){
   };
   const changeQty = (id,d)=>setCart(c=>c.map(i=>i.id===id?{...i,qty:Math.max(1,i.qty+d)}:i));
   const removeItem = (id)=>setCart(c=>c.filter(i=>i.id!==id));
-  const goShop = ()=>{ document.getElementById('shop')?.scrollIntoView?.({behavior:'smooth',block:'start'}); };
+  const goShop = ()=>{ window.location.href='collection.html'; };
 
   // close overlays on Escape
   useEffect(()=>{

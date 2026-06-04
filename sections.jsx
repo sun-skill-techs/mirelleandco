@@ -50,7 +50,7 @@ function Header({ cartCount, onCart, onSearch, onMenu }){
       React.createElement('nav',{ className:'nav' },
         React.createElement('a',{ href:'#', className:'has-caret', onMouseEnter:()=>setMega(true), onClick:e=>e.preventDefault() },
           'Shop', React.createElement(Icon,{ name:'caret', style:{width:14,height:14} })),
-        React.createElement('a',{ href:'#collections', onClick:e=>e.preventDefault() },'Collections'),
+        React.createElement('a',{ href:'collection.html' },'Collections'),
         React.createElement('a',{ href:'#about', onClick:e=>e.preventDefault() },'About'),
         React.createElement('a',{ href:'#gifts', onClick:e=>e.preventDefault() },'Gifts'),
       ),
@@ -76,19 +76,19 @@ function Header({ cartCount, onCart, onSearch, onMenu }){
     React.createElement('div',{ className:`megamenu ${mega?'open':''}`, onMouseEnter:()=>setMega(true) },
       React.createElement('div',{ className:'mega-col' },
         React.createElement('h4',null,'By Category'),
-        shop.map(s=>React.createElement('a',{ key:s, href:'#', onClick:e=>e.preventDefault() }, s)),
+        shop.map(s=>React.createElement('a',{ key:s, href:'collection.html' }, s)),
       ),
       React.createElement('div',{ className:'mega-col' },
         React.createElement('h4',null,'By Material'),
-        ['Sterling Silver','Gold Vermeil','Pearl','Cubic Zirconia'].map(s=>React.createElement('a',{ key:s, href:'#', onClick:e=>e.preventDefault() }, s)),
+        ['Sterling Silver','Gold Vermeil','Pearl','Cubic Zirconia'].map(s=>React.createElement('a',{ key:s, href:'collection.html' }, s)),
       ),
       React.createElement('div',{ className:'mega-col' },
         React.createElement('h4',null,'Collections'),
-        ["Editor's Picks","Parisian Romance","Everyday Essentials","The Earring Edit"].map(s=>React.createElement('a',{ key:s, href:'#', onClick:e=>e.preventDefault() }, s)),
+        ["Editor's Picks","Parisian Romance","Everyday Essentials","The Earring Edit"].map(s=>React.createElement('a',{ key:s, href:'collection.html' }, s)),
       ),
       React.createElement('div',{ className:'mega-col' },
         React.createElement('h4',null,'By Price'),
-        ['Under R300','R300 – R600','R600 – R1000','Gifts over R1000'].map(s=>React.createElement('a',{ key:s, href:'#', onClick:e=>e.preventDefault() }, s)),
+        ['Under R300','R300 – R600','R600 – R1000','Gifts over R1000'].map(s=>React.createElement('a',{ key:s, href:'collection.html' }, s)),
       ),
       React.createElement('div',{ className:'mega-feature' },
         React.createElement(Slot,{ tone:'tone-nude', label:'campaign / the earring edit', src:'assets/site-images/model-double-hoop.webp', alt:'Model wearing double hoop earrings' }),
@@ -356,9 +356,10 @@ function Newsletter(){
 /* ============== FOOTER ============== */
 function Footer(){
   const [open,setOpen] = useState(null);
+  const collectionLink = 'collection.html';
   const cols = [
-    { h:'Shop', links:['All Jewellery','Rings','Earrings','Necklaces','Pendants'] },
-    { h:'Collections', links:["Editor's Picks","Parisian Romance","Everyday Essentials","The Earring Edit","Gift Collection"] },
+    { h:'Shop', links:['All Jewellery','Rings','Earrings','Necklaces','Pendants'], href:collectionLink },
+    { h:'Collections', links:["Editor's Picks","Parisian Romance","Everyday Essentials","The Earring Edit","Gift Collection"], href:collectionLink },
     { h:'About', links:['Our Story','Craftsmanship','Packaging','Care Guide'] },
     { h:'Customer Care', links:['FAQs','Shipping','Returns','Contact Us'] },
   ];
@@ -378,7 +379,7 @@ function Footer(){
             React.createElement('button',{ className:'footer-col-toggle', onClick:()=>setOpen(open===c.h?null:c.h), 'aria-expanded':open===c.h },
               React.createElement('h4',null,c.h),React.createElement(Icon,{ name:'caret' })),
             React.createElement('div',{ className:'footer-links' },
-              c.links.map(l=>React.createElement('a',{ key:l, href:'#', onClick:e=>e.preventDefault() }, l))),
+              c.links.map(l=>React.createElement('a',{ key:l, href:c.href||'#', ...(c.href?{}:{onClick:e=>e.preventDefault()}) }, l))),
           )
         ),
       ),
