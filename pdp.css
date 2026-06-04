@@ -100,7 +100,20 @@
 .gift-check svg{width:12px;height:12px;}
 .gift .gt{font-family:var(--sans);font-size:.84rem;color:var(--espresso);}
 .gift .gt b{font-weight:500;}
-.gift .gt span{color:var(--ink-soft);font-size:.78rem;}
+.gift .gt>span{color:var(--ink-soft);font-size:.78rem;}
+.gift-tip-wrap{position:relative;display:inline-flex;align-items:center;margin-left:5px;vertical-align:middle;}
+.gift-tip-icon{font-size:.72rem;color:var(--ink-soft);cursor:default;line-height:1;}
+.gift-tip{
+  display:none;
+  position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+  width:220px;padding:8px 10px;
+  background:var(--espresso);color:var(--porcelain);
+  font-family:var(--sans);font-size:.68rem;line-height:1.5;font-weight:400;
+  border-radius:4px;white-space:normal;text-align:center;z-index:10;
+  pointer-events:none;
+}
+.gift-tip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--espresso);}
+.gift-tip-wrap:hover .gift-tip{display:block;}
 .gift .free{margin-left:auto;font-family:var(--sans);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);white-space:nowrap;}
 .gift-msg{display:block;width:100%;margin-top:0;padding:12px 14px;border:1px solid var(--gold-deep);border-top:none;border-radius:0 0 3px 3px;font-family:var(--sans);font-size:.84rem;color:var(--espresso);background:rgba(200,164,106,.06);resize:vertical;outline:none;box-sizing:border-box;}
 .gift-msg::placeholder{color:var(--ink-soft);}

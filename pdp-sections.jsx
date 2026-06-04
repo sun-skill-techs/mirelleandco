@@ -124,7 +124,10 @@ function InfoPanel({ product, onAdd, wished, onWish }){
         React.createElement('span',{ className:'gift-check' }, React.createElement(Icon,{ name:'check' })),
         React.createElement('span',{ className:'gt' },
           React.createElement('b',null,'Add signature gift wrap'),
-          React.createElement('span',null,' — ribbon-tied box & handwritten note')),
+          React.createElement('span',null,' — ribbon-tied box & handwritten note'),
+          React.createElement('span',{ className:'gift-tip-wrap' },
+            React.createElement('span',{ className:'gift-tip-icon' },'ⓘ'),
+            React.createElement('span',{ className:'gift-tip' },'This feature may require a separate app integration — we\'ll confirm availability before launch.'))),
         React.createElement('span',{ className:'free' },'+ R60'),
       ),
       gift && React.createElement('textarea',{
