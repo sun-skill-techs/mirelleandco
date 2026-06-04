@@ -198,18 +198,18 @@
   .gallery-mobile-track{gap:6px;}
   .craft-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px;}
   .brand-story-grid{grid-template-columns:1fr;gap:30px;}
-  /* sticky bar mobile — thumb | name | button */
-  .sticky-bar{background:var(--porcelain);}
-  .sticky-inner{gap:0;padding:0;align-items:stretch;}
-  .sb-thumb{width:56px;height:56px;border-radius:0;flex:none;align-self:stretch;height:auto;}
-  .sb-info{flex:1;padding:10px 14px;min-width:0;}
+  /* sticky bar mobile — same layout as desktop, tighter sizing */
+  .sticky-inner{gap:10px;padding:8px 0;}
+  .sb-thumb{width:44px;height:52px;}
+  .sb-name{font-size:1rem;}
   .sb-meta{display:none;}
-  .sb-price{display:none;}
-  .sticky-bar .sb-name{font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .sb-btn{flex:none;border-radius:0;align-self:stretch;height:auto;padding:0 22px;font-size:.72rem;letter-spacing:.18em;background:var(--espresso);color:var(--porcelain);border:none;}
-  .sb-btn:hover{background:var(--gold-deep);color:var(--porcelain);}
+  .sb-price{font-size:.9rem;}
+  .sb-price .was{font-size:.75rem;margin-right:5px;}
+  .sb-btn{font-size:.7rem;padding:0 14px;}
   /* trust: 2-col on mobile */
   .pi-trust{grid-template-columns:1fr 1fr;}
+  /* push WA fab above sticky bar */
+  .wa-fab{bottom:84px;}
 }
 @media(max-width:560px){
   .pi-buy{flex-wrap:wrap;}
