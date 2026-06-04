@@ -273,8 +273,8 @@ function Testimonials(){
         React.createElement('div',{ ref:track, className:'testi-grid slider-track' },
           window.MIRELLE.testimonials.map((t,i)=>
             React.createElement('div',{ key:i, className:'testi-card' },
-              React.createElement('div',{ className:'quote-mark', 'aria-hidden':true },'“'),
               React.createElement('div',{ className:'testi-content' },
+                React.createElement('div',{ className:'quote-mark', 'aria-hidden':true },'”'),
                 React.createElement('p',{ className:'testi-quote' },t.quote),
                 React.createElement('div',{ className:'testi-by' },'– ',t.by, t.loc && React.createElement('span',null,' · ',t.loc)),
                 React.createElement('div',{ className:'stars' },
@@ -283,7 +283,7 @@ function Testimonials(){
             )
           )
         ),
-        React.createElement(SliderControls,{ target:track }),
+        React.createElement(SliderControls,{ target:track, className:'mobile-only-controls' }),
       ),
     )
   );

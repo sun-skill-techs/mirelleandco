@@ -232,7 +232,8 @@ section{position:relative;}
 /* ============================================================ */
 /* FEATURED PRODUCTS */
 .feat{background:var(--porcelain);padding-top:clamp(36px,4vw,64px);}
-.feat-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:46px;flex-wrap:wrap;}
+.feat-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:46px;flex-wrap:wrap;overflow-x:auto;scrollbar-width:none;}
+.feat-tabs::-webkit-scrollbar{display:none;}
 .feat-tab{
   font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
   padding:11px 22px;border-radius:999px;color:var(--ink-soft);transition:.3s;border:1px solid transparent;
@@ -315,9 +316,9 @@ section{position:relative;}
 .testi-card{
   position:relative;flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start;
   background:rgba(247,243,238,.52);border-top:1px solid var(--line-soft);
-  padding:30px 24px;display:grid;grid-template-columns:38px 1fr;gap:14px;
+  padding:30px 24px;
 }
-.quote-mark{font-family:var(--serif);font-size:4.7rem;line-height:.8;color:var(--nude);font-weight:600;}
+.quote-mark{font-family:var(--serif);font-size:4.7rem;line-height:.8;color:var(--nude);font-weight:600;display:block;margin-bottom:8px;}
 .testi-content{display:flex;flex-direction:column;align-items:flex-start;min-width:0;}
 .stars{display:flex;gap:3px;color:var(--gold);}
 .stars svg{width:15px;height:15px;}
@@ -530,7 +531,13 @@ section{position:relative;}
   .footer-top{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:560px){
-  :root{--gutter:18px;}
+  :root{--gutter:14px;}
+  /* feat tabs: single scrollable row */
+  .feat-tabs{flex-wrap:nowrap;justify-content:flex-start;margin-bottom:28px;padding-bottom:2px;}
+  /* testimonial slider arrows on mobile */
+  .testimonial-slider-shell .mobile-only-controls{display:flex;}
+  .testimonial-slider-shell .slider-arrow.prev{left:4px;}
+  .testimonial-slider-shell .slider-arrow.next{right:4px;}
   .header-inner{min-height:64px;}
   .brand img{height:62px;}
   .hero{min-height:68vh;}
@@ -540,7 +547,7 @@ section{position:relative;}
   .hero-cta-row{flex-direction:column;}
   .hero-cta-row .btn{width:100%;}
   .explore-grid{gap:22px;}
-  .quick-add{opacity:1;transform:none;}
+  .quick-add{display:none;}
   .card:hover .card-media .slot.main{transform:none;}
   .story-cell{width:48vw;}
   .footer{padding-top:42px;}

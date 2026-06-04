@@ -120,9 +120,8 @@ function StickyBar({ product, onAdd, visible }){
         React.createElement(Slot,{ tone:img.tone, src:img.src, alt:img.alt })),
       React.createElement('div',{ className:'sb-info' },
         React.createElement('div',{ className:'sb-name' }, product.name),
-        React.createElement('div',{ className:'sb-meta' }, mat.name)),
-      React.createElement('div',{ className:'sb-price' },
-        React.createElement('span',{ className:'was' }, zar(mat.compare)), zar(mat.price)),
+        React.createElement('div',{ className:'sb-price' },
+          React.createElement('span',{ className:'was' }, zar(mat.compare)), zar(mat.price))),
       React.createElement('button',{ className:'btn btn-solid sb-btn atc-sb', onClick:()=>onAdd({ id:`${product.id}-${mat.id}-45`, name:product.name, mat:`${mat.name} · 45 cm`, price:zar(mat.price), tone:img.tone, qty:1 }) },'Add to Bag'),
     )
   );
