@@ -315,7 +315,20 @@ function Story(){
     React.createElement('div',{ className:'wrap' },
       React.createElement('div',{ className:'story-handle' },
         React.createElement('a',{ href:'#', onClick:e=>e.preventDefault() },
-          React.createElement(Icon,{ name:'insta', style:{width:18,height:18} }),'@mirelleandco')),
+          React.createElement(Icon,{ name:'insta', style:{width:18,height:18} }),'@mirelleandco'),
+        React.createElement('div',{ className:'client-note' },
+          React.createElement('button',{
+            type:'button',
+            className:'client-note-trigger',
+            'aria-describedby':'instagram-layout-note'
+          },'Note for Jaime'),
+          React.createElement('span',{
+            className:'client-note-tooltip',
+            id:'instagram-layout-note',
+            role:'tooltip'
+          },'Layout may change if you want to use an app to fetch the latest posts from Instagram. For custom images, this layout can stay as is.')
+        )
+      ),
     )
   );
 }
