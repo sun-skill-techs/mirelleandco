@@ -196,13 +196,14 @@
   .gallery-desktop{display:none;}
   .gallery-mobile{display:block;padding:0 var(--gutter);padding-bottom:16px;}
   .gallery-mobile-track{gap:6px;}
+  .gallery-mobile-item{flex-basis:calc(92%);}
   .craft-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px;}
   .brand-story-grid{grid-template-columns:1fr;gap:30px;}
   /* sticky bar mobile — same layout as desktop, tighter sizing */
   .sticky-inner{gap:10px;padding:8px 0;}
   .sb-thumb{width:44px;height:52px;}
   .sb-name{font-size:.95rem;}
-  .sb-btn{font-size:.7rem;padding:0 14px;}
+  .sb-btn{font-size:.7rem;padding:12px 14px;}
   /* trust: 2-col on mobile */
   .pi-trust{grid-template-columns:1fr 1fr;}
   /* push WA fab above sticky bar */

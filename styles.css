@@ -534,6 +534,7 @@ section{position:relative;}
   :root{--gutter:14px;}
   /* feat tabs: single scrollable row */
   .feat-tabs{flex-wrap:nowrap;justify-content:flex-start;margin-bottom:28px;padding-bottom:2px;}
+  .feat-tab{font-size:.6rem;padding:9px 16px;}
   /* testimonial slider arrows on mobile */
   .testimonial-slider-shell .mobile-only-controls{display:flex;}
   .testimonial-slider-shell .slider-arrow.prev{left:4px;}
