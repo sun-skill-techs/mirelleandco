@@ -59,7 +59,8 @@ function Header({ cartCount, onCart, onSearch, onMenu }){
         React.createElement(Icon,{ name:'menu' })),
       // brand
       React.createElement('div',{ className:'brand' },
-        React.createElement('img',{ src:'assets/logo-vertical.webp', alt:'Mirelle & Co' })),
+        React.createElement('a',{ href:'index.html' },
+          React.createElement('img',{ src:'assets/logo-vertical.webp', alt:'Mirelle & Co' }))),
       // actions
       React.createElement('div',{ className:'header-actions' },
         React.createElement('button',{ className:'icon-btn', onClick:onSearch, 'aria-label':'Search' },
