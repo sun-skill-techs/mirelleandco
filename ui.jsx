@@ -26,6 +26,12 @@ const ICONS = {
   check:'M5 12l4 4 10-10',
   menu:'M4 7h16M4 12h16M4 17h16',
   ring:'M12 9a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2-4 2-2 2 2-2 2-2-2Z',
+  zoom:'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm6 13 4 4M11 8v6M8 11h6',
+  lock:'M7 11V8a5 5 0 0 1 10 0v3M5 11h14v9H5v-9Z',
+  sparkle:'M12 3l1.6 4.8L18 9.4l-4.4 1.6L12 16l-1.6-5L6 9.4l4.4-1.6L12 3Z',
+  leaf:'M5 19c0-8 6-14 14-14 0 8-6 14-14 14Zm0 0c2-5 5-8 9-10',
+  box:'M3 8l9-4 9 4-9 4-9-4Zm0 0v8l9 4 9-4V8M12 12v8',
+  award:'M12 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-3 9-2 8 5-3 5 3-2-8',
 };
 const FILLED = { heart:true, star:true, whatsapp:true };
 

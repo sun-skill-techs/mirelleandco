@@ -1,0 +1,76 @@
+/* MIRELLE & CO — Product Detail data */
+window.MIRELLE_PDP = {
+  product:{
+    id:"amelie-pendant",
+    name:"Amélie Pendant Necklace",
+    collection:"The Parisian Romance Collection",
+    rating:4.9,
+    reviewCount:218,
+    soldNote:"312 sold this month",
+    stock:6,
+    sku:"MC-AMP-001",
+    tagline:"A single, luminous drop on a whisper-fine chain — Amélie is the everyday heirloom you'll never take off.",
+    // gallery slots (placeholders)
+    gallery:[
+      {tone:"tone-cream",  label:"hero · pendant on model neckline",    src:"assets/site-images/hero-hoops-model.webp",          alt:"Amélie pendant on model"},
+      {tone:"tone-blush",  label:"close-up · cz solitaire detail",      src:"assets/site-images/Circular CZ Cluster Stud.png",   alt:"CZ solitaire close-up"},
+      {tone:"tone-taupe",  label:"flat-lay · on silk with box",         src:"assets/site-images/product-silver-bangle.webp",     alt:"Pendant flat-lay on silk"},
+      {tone:"tone-nude",   label:"on-model · 3/4 lifestyle",            src:"assets/site-images/model-double-hoop.webp",         alt:"Pendant on model lifestyle"},
+      {tone:"tone-cream",  label:"scale · in hand",                     src:"assets/site-images/lifestyle-bangle.webp",          alt:"Pendant held in hand"},
+    ],
+    materials:[
+      {id:"silver", name:"Sterling Silver", price:540, compare:680, swatch:"#D9D6D2"},
+      {id:"gold",   name:"14k Gold Vermeil", price:740, compare:890, swatch:"#C8A46A"},
+      {id:"rose",   name:"Rose Gold Vermeil", price:740, compare:890, swatch:"#D8AE9E"},
+    ],
+    lengths:[
+      {id:"40", name:'40 cm', note:"Choker"},
+      {id:"45", name:'45 cm', note:"Princess", default:true},
+      {id:"50", name:'50 cm', note:"Matinée"},
+    ],
+    highlights:[
+      "Hand-set 5mm cubic zirconia solitaire",
+      "Tarnish-resistant, hypoallergenic finish",
+      "Adjustable extender chain included",
+      "Arrives in a signature ribbon-tied box",
+    ],
+    accordions:[
+      {title:"Description", body:"Amélie is our most-loved everyday piece — a brilliant-cut solitaire suspended on a delicate cable chain that catches the light with every movement. Designed in the spirit of Paris and made to be layered or worn alone, it's the kind of quiet luxury that becomes part of you."},
+      {title:"Materials & Care", body:"Crafted from 925 sterling silver (or 14k gold vermeil over sterling) with a hand-set cubic zirconia. Hypoallergenic and nickel-free. To keep your piece luminous, store it dry in the pouch provided and avoid contact with perfume, lotion and water."},
+      {title:"Shipping & Returns", body:"Dispatched within 24 hours via The Courier Guy. Free shipping on orders over R1500 · 2–4 working days nationwide. Not in love? Enjoy 30-day hassle-free returns on all unworn jewellery, in its original packaging."},
+      {title:"Our Promise", body:"Every Mirelle & Co piece is hand-inspected before it's carefully wrapped and dispatched. Backed by a 12-month craftsmanship guarantee against manufacturing defects."},
+    ],
+    completeLook:[
+      {id:"cl1", name:"Solène Hoops",    mat:"Sterling Silver", price:"R 420", tone:"tone-taupe"},
+      {id:"cl2", name:"Margaux Studs",   mat:"Silver · Pearl",  price:"R 295", tone:"tone-blush"},
+      {id:"cl3", name:"Vivienne Bangle", mat:"Sterling Silver", price:"R 510", tone:"tone-nude"},
+    ],
+  },
+  ratingBreakdown:[
+    {stars:5, pct:88},
+    {stars:4, pct:9},
+    {stars:3, pct:2},
+    {stars:2, pct:1},
+    {stars:1, pct:0},
+  ],
+  reviews:[
+    {name:"Sarah M.", loc:"Cape Town", rating:5, date:"2 weeks ago", verified:true,
+     title:"My new everyday piece",
+     body:"I haven't taken it off since it arrived. The chain is so delicate and the stone catches the light beautifully. The packaging made it feel like a gift to myself.", tone:"tone-blush"},
+    {name:"Chloé R.", loc:"Johannesburg", rating:5, date:"1 month ago", verified:true,
+     title:"Even prettier in person",
+     body:"Photos don't do it justice — you can feel the quality. I went for the gold vermeil and the colour is so warm and rich. Worth every rand.", tone:"tone-nude"},
+    {name:"Jessica T.", loc:"Durban", rating:5, date:"1 month ago", verified:true,
+     title:"Perfect gift",
+     body:"Bought this for my sister's birthday and she cried. The ribbon-tied box is gorgeous and delivery was quick. Will definitely order again.", tone:null},
+    {name:"Naledi K.", loc:"Pretoria", rating:4, date:"2 months ago", verified:true,
+     title:"Beautiful, dainty",
+     body:"Really elegant and lightweight. I wish the extender was a touch longer for layering, but otherwise I adore it.", tone:null},
+  ],
+  related:[
+    {id:"r1", name:"Vivienne Necklace", mat:"Silver · CZ Solitaire", price:"R 620", tone:"tone-cream", badge:"Best Seller", badgeClass:"gold", img:"assets/site-images/Circular CZ Cluster Stud.png"},
+    {id:"r2", name:"Colette Drops",     mat:"Sterling Silver",        price:"R 380", tone:"tone-nude",  badge:"New",                            img:"assets/site-images/Cross CZ Cluster Stud Front View - Camille.png"},
+    {id:"r3", name:"Joséphine Hoops",   mat:"Sterling Silver",        price:"R 460", was:"R 540", tone:"tone-taupe", badge:"Loved", badgeClass:"gold", img:"assets/site-images/Geometric Butterfly Front View.png"},
+    {id:"r4", name:"Delphine Pendant",  mat:"Gold Vermeil · Emerald", price:"R 1 480", tone:"tone-blush", badge:"Gold Edit", badgeClass:"blush", img:"assets/site-images/Double Heart Front View.png"},
+  ],
+};
